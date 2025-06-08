@@ -1,0 +1,227 @@
+<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<title>Login</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<head>
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background: url("{% static 'bg1.png' %}");
+			background-color:#eee;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+        .style2 {
+	font-family: 'Righteous', cursive;
+	color: #FF0000;
+	font-weight: bold;
+}
+        </style>
+	</head>
+	<body>
+	<div class="container-fluid">
+		<div>
+			<h2 class="text-center style1" id="title">Optimal Ambulance Positioning for Road Accidents With Deep Embedded Clustering</h2>
+			 <p class="text-center">
+				<span class="style1"><small id="passwordHelpInline" class="text-muted">Deep embedded clustering (DEC), Cat2Vec, K-means, ambulance positioning, accident hotspots.
+
+
+</small></span> </p>
+ 			<hr>
+			<div class="row">
+
+
+				<div class="col-md-2">-->
+					<!-------null------>
+		<!--		</div>
+
+				<div class="col-md-5">
+ 				 		<form method="POST" role="form">
+							{% csrf_token %}
+
+						<fieldset>
+                             {% load static %}
+						<img src="{% static '/login.jpg' %}" alt="My image">
+							<p class="style2"> Login Service Provider: </p>
+
+							<div class="form-group">
+								<input type="text" name="username"   placeholder="User Name" required>
+							</div>
+							<div class="form-group">
+								<input type="password" name="password"   placeholder="Password" required>
+							</div>
+							<div>
+								<input type="submit" name="submit1"  class="btn btn-md" value="Login">
+							</div>
+ 						</fieldset>
+						<br><br>
+						<button class="btn btn-lg "><a href="{% url 'login' %}">User Login</a></button> 
+				</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	</body>
+
+
+</html>-->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> 
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="{% static 'images/icon.png' %}" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: url("{% static 'bg2.png' %}") no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Righteous', cursive;
+            color: white;
+			
+        }
+
+        .container-fluid {
+            padding-top: 50px;
+        }
+
+        .glass-box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            color: #fff;
+        }
+
+        .form-control {
+			align-items: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 10px;
+            padding: 12px;
+            margin-bottom: 20px;
+			width: 250px;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 10px #B30000;
+        }
+
+        .btn-primary {
+            background-color: #B30000;
+            border: none;
+            border-radius: 10px;
+			width: 250px;
+	
+        }
+
+        .btn-primary:hover {
+            background-color: #800000;
+		        }
+
+        #title {
+            font-family: 'Fredoka One', cursive;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .style4 small {
+            color: #ffb3b3;
+        }
+
+        .btn a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .btn a:hover {
+            text-decoration: none;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        hr {
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="text-center">
+            <h2 class="style1" id="title">
+                <strong>Optimal Ambulance Positioning for Road Accidents With Deep Embedded Clustering</strong>
+            </h2>
+            <p>
+                <span class="style4">
+                    <small id="passwordHelpInline">
+                        Deep embedded clustering (DEC), Cat2Vec, K-means, ambulance positioning, accident hotspots.
+                    </small>
+                </span>
+            </p>
+        </div>
+        <hr>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="glass-box">
+                    <form method="POST" role="form">
+                        {% csrf_token %}
+                        <fieldset>
+                            <h4 class="text-center mb-4">Login Using Your Account</h4>
+							<div  style="padding-left: 200px;">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" class="form-control" placeholder="Enter Username" required>
+
+                            <label for="password">Password</label>
+                            <input type="password" name="password" class="form-control" placeholder="Enter Password" required>
+
+                            <button type="submit" name="submit1" class="btn btn-primary btn-block">Sign In</button>
+							</div>
+                        </fieldset>
+                    </form>
+
+                    <hr>
+                    <div class="text-center">
+                        <a href="{% url 'login' %}" class="btn btn-outline-light btn-sm">User Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

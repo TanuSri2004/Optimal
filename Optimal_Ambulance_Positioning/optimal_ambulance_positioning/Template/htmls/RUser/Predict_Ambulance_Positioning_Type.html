@@ -1,0 +1,368 @@
+{% extends 'RUser/design.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+<style>
+  body {
+      background-color: #000000;
+  }
+
+  .container-fluid {
+      padding: 50px;
+  }
+
+  .container {
+      background-color: white;
+      padding: 50px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1.5s ease-in-out;
+  }
+
+  #title {
+      font-family: 'Fredoka One', cursive;
+  }
+
+  .text-uppercase {
+      font-family: 'Righteous', cursive;
+      text-transform: uppercase;
+  }
+
+  .style1 {
+      color: white;
+      font-weight: bold;
+  }
+
+  .style10 {
+      color: black;
+      font-weight: bold;
+  }
+
+  .style12 {
+      color: black;
+      font-weight: bold;
+  }
+
+  .form-group {
+      color: black;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      background-color: #f8f8f8;
+  }
+
+  .form-group:hover {
+      background-color: #f0f0f0;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+  }
+
+  .form-group input:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  }
+
+  /* Table Styling */
+  table {
+      width: 100%;
+      margin: 20px 0;
+      border-collapse: collapse;
+  }
+
+  table th, table td {
+      padding: 15px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+  }
+
+  table th {
+      background-color: #1c7ed6;
+      color: white;
+  }
+
+  table td {
+      background-color: #f8f9fa;
+      color: #333;
+  }
+
+  table tr:nth-child(even) td {
+      background-color: #f1f3f5;
+  }
+
+  table tr:hover td {
+      background-color: #e2e6ea;
+      cursor: pointer;
+  }
+
+  .submit-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  }
+
+  .submit-btn:hover {
+      background-color: #0056b3;
+  }
+
+  /* Header Animation */
+  .style13 {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-style: italic;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px 5px #ff0000;
+  }
+
+  /* Animation for Fade In */
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+
+      to {
+          opacity: 1;
+      }
+  }
+
+  /* Animation for form entry */
+  @keyframes slideIn {
+      from {
+          transform: translateX(-100%);
+          opacity: 0;
+      }
+
+      to {
+          transform: translateX(0);
+          opacity: 1;
+      }
+  }
+
+  /* Apply animation to the form */
+  .form-container {
+      animation: slideIn 1.2s ease-out;
+  }
+
+</style>
+		<!--<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 142px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: white;
+	font-weight: bold;
+}
+.style6 {color: white}
+.style8 {font-weight: bold}
+.style10 {color: black}
+        .style12 {color: black; font-weight: bold; }
+        .style13 {
+	color:white;
+	font-weight: bold;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+}
+        </style>-->
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p align="center" class="text-uppercase pull-center style1">PREDICT AMBULANCE POSITIONING  TYPE!!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="1122" align="center">
+                                  <tr>
+                                    <td height="44" colspan="4" bgcolor="darkcyan"><div align="center" class="style13">ENTER ALL PROFILE ATTRIBUTE DETAILS HERE !!! </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="289" height="44" bgcolor="darkcyan"><div align="center"><strong><span class="style10"><br>
+                                    Enter Fid</span></strong></div></td>
+                                    <td width="240"><div align="center">
+                                      <input type="text" name="Fid">
+                                    </div></td>
+                                    <td width="319" bgcolor="darkcyan"><span class="style12">Enter Temp</span></td>
+                                    <td width="254"><div align="center">
+                                      <input type="text" name="Temp">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="lightyellow"><div align="center"><strong><span class="style10">Enter Wind</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Wind">
+                                    </div></td>
+                                    <td bgcolor="lightyellow"><span class="style12">Enter Date_Time</span></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Date_Time">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="darkcyan"><div align="center"><strong><span class="style10">Enter Age_band_of_driver</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Age_band_of_driver">
+                                    </div></td>
+                                    <td bgcolor="darkcyan"><span class="style12">Enter Sex_of_driver</span></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Sex_of_driver">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="lightyellow"><div align="center"><strong><span class="style10">Enter Vehicle_driver_relation</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Vehicle_driver_relation">
+                                    </div></td>
+                                    <td bgcolor="lightyellow"><span class="style12">Enter Driving_experience </span></td>
+                                    <td><div align="center">
+                                      <input name="Driving_experience" type="text" value="">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="darkcyan"><div align="center"><strong><span class="style10">Enter Type_of_vehicle</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Type_of_vehicle">
+                                    </div></td>
+                                    <td bgcolor="darkcyan"><span class="style12">Enter Area_accident_occured</span></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Area_accident_occured">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="lightyellow"><div align="center"><strong><span class="style10">Enter Types_of_Junction</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Types_of_Junction">
+                                    </div></td>
+                                    <td bgcolor="lightyellow"><span class="style12">Enter Type_of_collision</span></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Type_of_collision">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="darkcyan"><div align="center"><strong><span class="style10">Enter Number_of_vehicles_involved</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input name="Number_of_vehicles_involved" type="text" value="">
+                                    </div></td>
+                                    <td bgcolor="darkcyan"><span class="style12">Enter Number_of_casualties</span></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Number_of_casualties">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="lightyellow"><div align="center"><strong><span class="style10">Enter Vehicle_movement</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Vehicle_movement">
+                                    </div></td>
+                                    <td bgcolor="lightyellow"><span class="style12">Enter Cause_of_accident</span></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Cause_of_accident">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="darkcyan"><div align="center"><strong><span class="style10">Enter Accident_severity</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Accident_severity">
+                                    </div></td>
+                                    <td bgcolor="darkcyan"><span class="style12">Enter Ambulace_Allocated</span></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Ambulace_Allocated">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="lightyellow"><div align="center" class="style12">Ambulace_Pickedup</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Ambulace_Pickedup">
+                                    </div></td>
+                                    <td bgcolor="lightyellow"><div align="center" class="style12">Latitude</div></td>
+                                    <td><div align="center">
+                                      <input name="Latitude" type="text" value="">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="darkcyan"><div align="center" class="style12">Longitude</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Longitude">
+                                    </div></td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FFFFFF"><div align="center"></div></td>
+                                    <td><div align="center"></div></td>
+                                    <td><input name="submit" type="submit" bgcolor="red" value="Predict Ambulance Positioning Type"></td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div>
+                               <table width="813" height="52" border="5" align="center" bordercolor="black">
+
+                    <tr><td width="453" bgcolor="darkcyan"><div align="center"><strong><span class="style8 style6">PREDICTION OF <span class="text-uppercase pull-center style1" style="color: black;">AMBULANCE POSITIONING</span> IN ROAD ::</span></strong></div></td>
+                      <td width="250" bgcolor="white" style="color:black; font-size:20px; font-family:fantasy" ><div align="center">------{{objs}} ------ </div></td>
+
+                        </tr>
+
+
+                      </table>
+
+                            </div>
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
